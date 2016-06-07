@@ -1,0 +1,1319 @@
+﻿<DataModel name="New data model" formatVersion="13" modelVersion="2" defQuery="" id="d8e36910-9895-4cc4-b290-b083e327011a">
+  <Description />
+  <CustomInfo />
+  <DMEOptions>
+    <listBoxTablesWidth>279</listBoxTablesWidth>
+    <FormWidth>880</FormWidth>
+    <FormHeight>577</FormHeight>
+  </DMEOptions>
+  <DBParams>
+    <SqlDialect>MS SQL</SqlDialect>
+    <ConnectionString>Data Source=SHIVAM;Initial Catalog=ScraperV4;Integrated Security=True</ConnectionString>
+    <LoginPrompt>False</LoginPrompt>
+    <GateClass>Korzh.EasyQuery.DataGates.SqlClientGate</GateClass>
+  </DBParams>
+  <Tables>
+    <Table class="db" alias="finviz_Calendar" schema="dbo" db="" dsgnLayout="" priority="1000" name="finviz_Calendar" hints="" quote="False" />
+    <Table class="db" alias="finviz_Financials" schema="dbo" db="" dsgnLayout="" priority="1000" name="finviz_Financials" hints="" quote="False" />
+    <Table class="db" alias="finviz_Insider_Trading" schema="dbo" db="" dsgnLayout="" priority="1000" name="finviz_Insider_Trading" hints="" quote="False" />
+    <Table class="db" alias="finviz_Market_Movers" schema="dbo" db="" dsgnLayout="" priority="1000" name="finviz_Market_Movers" hints="" quote="False" />
+    <Table class="db" alias="finviz_News" schema="dbo" db="" dsgnLayout="" priority="1000" name="finviz_News" hints="" quote="False" />
+    <Table class="db" alias="finviz_Recommendations" schema="dbo" db="" dsgnLayout="" priority="1000" name="finviz_Recommendations" hints="" quote="False" />
+    <Table class="db" alias="ft_Consensus" schema="dbo" db="" dsgnLayout="" priority="1000" name="ft_Consensus" hints="" quote="False" />
+    <Table class="db" alias="ft_Financials" schema="dbo" db="" dsgnLayout="" priority="1000" name="ft_Financials" hints="" quote="False" />
+    <Table class="db" alias="ft_Forecasts" schema="dbo" db="" dsgnLayout="" priority="1000" name="ft_Forecasts" hints="" quote="False" />
+    <Table class="db" alias="reuters_Financials_Dividends" schema="dbo" db="" dsgnLayout="" priority="1000" name="reuters_Financials_Dividends" hints="" quote="False" />
+    <Table class="db" alias="reuters_Financials_Efficiencies" schema="dbo" db="" dsgnLayout="" priority="1000" name="reuters_Financials_Efficiencies" hints="" quote="False" />
+    <Table class="db" alias="reuters_Financials_GrowthRates" schema="dbo" db="" dsgnLayout="" priority="1000" name="reuters_Financials_GrowthRates" hints="" quote="False" />
+    <Table class="db" alias="reuters_Financials_Institutions" schema="dbo" db="" dsgnLayout="" priority="1000" name="reuters_Financials_Institutions" hints="" quote="False" />
+    <Table class="db" alias="reuters_Financials_MgmtEffectiveness" schema="dbo" db="" dsgnLayout="" priority="1000" name="reuters_Financials_MgmtEffectiveness" hints="" quote="False" />
+    <Table class="db" alias="reuters_Financials_ProfitabilityRatios" schema="dbo" db="" dsgnLayout="" priority="1000" name="reuters_Financials_ProfitabilityRatios" hints="" quote="False" />
+    <Table class="db" alias="reuters_Financials_SalesEstimates" schema="dbo" db="" dsgnLayout="" priority="1000" name="reuters_Financials_SalesEstimates" hints="" quote="False" />
+    <Table class="db" alias="reuters_Financials_Strength" schema="dbo" db="" dsgnLayout="" priority="1000" name="reuters_Financials_Strength" hints="" quote="False" />
+    <Table class="db" alias="reuters_Financials_ValuationRatios" schema="dbo" db="" dsgnLayout="" priority="1000" name="reuters_Financials_ValuationRatios" hints="" quote="False" />
+    <Table class="db" alias="reuters_RecommendationsRevisions" schema="dbo" db="" dsgnLayout="" priority="1000" name="reuters_RecommendationsRevisions" hints="" quote="False" />
+    <Table class="db" alias="sysdiagrams" schema="dbo" db="" dsgnLayout="" priority="1000" name="sysdiagrams" hints="" quote="False" />
+    <Table class="db" alias="ws_JobRuns" schema="dbo" db="" dsgnLayout="" priority="1000" name="ws_JobRuns" hints="" quote="False" />
+    <Table class="db" alias="ws_Jobs" schema="dbo" db="" dsgnLayout="" priority="1000" name="ws_Jobs" hints="" quote="False" />
+    <Table class="db" alias="ws_JobScheduler" schema="dbo" db="" dsgnLayout="" priority="1000" name="ws_JobScheduler" hints="" quote="False" />
+    <Table class="db" alias="ws_JobScheduler_Daily" schema="dbo" db="" dsgnLayout="" priority="1000" name="ws_JobScheduler_Daily" hints="" quote="False" />
+    <Table class="db" alias="ws_JobScheduler_Monthly" schema="dbo" db="" dsgnLayout="" priority="1000" name="ws_JobScheduler_Monthly" hints="" quote="False" />
+    <Table class="db" alias="ws_JobScheduler_Weekly" schema="dbo" db="" dsgnLayout="" priority="1000" name="ws_JobScheduler_Weekly" hints="" quote="False" />
+    <Table class="db" alias="ws_JobScheduler_Yearly" schema="dbo" db="" dsgnLayout="" priority="1000" name="ws_JobScheduler_Yearly" hints="" quote="False" />
+    <Table class="db" alias="ws_Logs" schema="dbo" db="" dsgnLayout="" priority="1000" name="ws_Logs" hints="" quote="False" />
+    <Table class="db" alias="ws_Stocks" schema="dbo" db="" dsgnLayout="" priority="1000" name="ws_Stocks" hints="" quote="False" />
+    <Table class="db" alias="wslu_JobSchedulerTypes" schema="dbo" db="" dsgnLayout="" priority="1000" name="wslu_JobSchedulerTypes" hints="" quote="False" />
+    <Table class="db" alias="wslu_JobTypes" schema="dbo" db="" dsgnLayout="" priority="1000" name="wslu_JobTypes" hints="" quote="False" />
+  </Tables>
+  <Links>
+    <Link table1="wslu_JobTypes" table2="ws_JobScheduler" type="Inner" QF="False">
+      <Condition type="FF" expr1="jobtype_id" expr2="jobtype_id" op="=" />
+    </Link>
+    <Link table1="wslu_JobSchedulerTypes" table2="ws_JobScheduler" type="Inner" QF="False">
+      <Condition type="FF" expr1="schedulertype_id" expr2="schedulertype_id" op="=" />
+    </Link>
+    <Link table1="ws_Jobs" table2="finviz_Calendar" type="Inner" QF="False">
+      <Condition type="FF" expr1="Job_id" expr2="job_run_id" op="=" />
+    </Link>
+    <Link table1="ws_Stocks" table2="finviz_Financials" type="Inner" QF="False">
+      <Condition type="FF" expr1="Stock_Id" expr2="Stock_Id" op="=" />
+    </Link>
+    <Link table1="ws_Jobs" table2="finviz_Financials" type="Inner" QF="False">
+      <Condition type="FF" expr1="Job_id" expr2="job_run_Id" op="=" />
+    </Link>
+    <Link table1="ws_Stocks" table2="finviz_Insider_Trading" type="Inner" QF="False">
+      <Condition type="FF" expr1="Stock_Id" expr2="stock_Id" op="=" />
+    </Link>
+    <Link table1="ws_Jobs" table2="finviz_Insider_Trading" type="Inner" QF="False">
+      <Condition type="FF" expr1="Job_id" expr2="Job_run_Id" op="=" />
+    </Link>
+    <Link table1="ws_Stocks" table2="finviz_Market_Movers" type="Inner" QF="False">
+      <Condition type="FF" expr1="Stock_Id" expr2="stock_id" op="=" />
+    </Link>
+    <Link table1="ws_Jobs" table2="finviz_Market_Movers" type="Inner" QF="False">
+      <Condition type="FF" expr1="Job_id" expr2="job_run_id" op="=" />
+    </Link>
+    <Link table1="ws_Stocks" table2="finviz_News" type="Inner" QF="False">
+      <Condition type="FF" expr1="Stock_Id" expr2="stock_id" op="=" />
+    </Link>
+    <Link table1="ws_Jobs" table2="finviz_News" type="Inner" QF="False">
+      <Condition type="FF" expr1="Job_id" expr2="job_run_id" op="=" />
+    </Link>
+    <Link table1="ws_Jobs" table2="finviz_Recommendations" type="Inner" QF="False">
+      <Condition type="FF" expr1="Job_id" expr2="job_run_id" op="=" />
+    </Link>
+    <Link table1="ws_Stocks" table2="finviz_Recommendations" type="Inner" QF="False">
+      <Condition type="FF" expr1="Stock_Id" expr2="stock_id" op="=" />
+    </Link>
+    <Link table1="ws_Jobs" table2="ft_Consensus" type="Inner" QF="False">
+      <Condition type="FF" expr1="Job_id" expr2="job_run_id" op="=" />
+    </Link>
+    <Link table1="ws_Stocks" table2="ft_Consensus" type="Inner" QF="False">
+      <Condition type="FF" expr1="Stock_Id" expr2="stock_id" op="=" />
+    </Link>
+    <Link table1="ws_Jobs" table2="ft_Financials" type="Inner" QF="False">
+      <Condition type="FF" expr1="Job_id" expr2="job_run_id" op="=" />
+    </Link>
+    <Link table1="ws_Stocks" table2="ft_Financials" type="Inner" QF="False">
+      <Condition type="FF" expr1="Stock_Id" expr2="stock_id" op="=" />
+    </Link>
+    <Link table1="ws_Jobs" table2="ft_Forecasts" type="Inner" QF="False">
+      <Condition type="FF" expr1="Job_id" expr2="job_run_id" op="=" />
+    </Link>
+    <Link table1="ws_Stocks" table2="ft_Forecasts" type="Inner" QF="False">
+      <Condition type="FF" expr1="Stock_Id" expr2="stock_id" op="=" />
+    </Link>
+    <Link table1="ws_Stocks" table2="reuters_Financials_Dividends" type="Inner" QF="False">
+      <Condition type="FF" expr1="Stock_Id" expr2="Stock_Id" op="=" />
+    </Link>
+    <Link table1="ws_Jobs" table2="reuters_Financials_Dividends" type="Inner" QF="False">
+      <Condition type="FF" expr1="Job_id" expr2="run_job_Id" op="=" />
+    </Link>
+    <Link table1="ws_Stocks" table2="reuters_Financials_Efficiencies" type="Inner" QF="False">
+      <Condition type="FF" expr1="Stock_Id" expr2="Stock_Id" op="=" />
+    </Link>
+    <Link table1="ws_Jobs" table2="reuters_Financials_Efficiencies" type="Inner" QF="False">
+      <Condition type="FF" expr1="Job_id" expr2="run_job_id" op="=" />
+    </Link>
+    <Link table1="ws_Stocks" table2="reuters_Financials_GrowthRates" type="Inner" QF="False">
+      <Condition type="FF" expr1="Stock_Id" expr2="Stock_Id" op="=" />
+    </Link>
+    <Link table1="ws_Jobs" table2="reuters_Financials_GrowthRates" type="Inner" QF="False">
+      <Condition type="FF" expr1="Job_id" expr2="run_job_id" op="=" />
+    </Link>
+    <Link table1="ws_Stocks" table2="reuters_Financials_Institutions" type="Inner" QF="False">
+      <Condition type="FF" expr1="Stock_Id" expr2="Stock_Id" op="=" />
+    </Link>
+    <Link table1="ws_Jobs" table2="reuters_Financials_Institutions" type="Inner" QF="False">
+      <Condition type="FF" expr1="Job_id" expr2="job_run_id" op="=" />
+    </Link>
+    <Link table1="ws_Stocks" table2="reuters_Financials_MgmtEffectiveness" type="Inner" QF="False">
+      <Condition type="FF" expr1="Stock_Id" expr2="Stock_Id" op="=" />
+    </Link>
+    <Link table1="ws_Jobs" table2="reuters_Financials_MgmtEffectiveness" type="Inner" QF="False">
+      <Condition type="FF" expr1="Job_id" expr2="job_run_Id" op="=" />
+    </Link>
+    <Link table1="ws_JobScheduler" table2="ws_Jobs" type="Inner" QF="False">
+      <Condition type="FF" expr1="scheduler_id" expr2="scheduler_id" op="=" />
+    </Link>
+    <Link table1="ws_Stocks" table2="reuters_Financials_ProfitabilityRatios" type="Inner" QF="False">
+      <Condition type="FF" expr1="Stock_Id" expr2="Stock_Id" op="=" />
+    </Link>
+    <Link table1="ws_Jobs" table2="reuters_Financials_ProfitabilityRatios" type="Inner" QF="False">
+      <Condition type="FF" expr1="Job_id" expr2="Job_run_Id" op="=" />
+    </Link>
+    <Link table1="ws_Stocks" table2="reuters_Financials_SalesEstimates" type="Inner" QF="False">
+      <Condition type="FF" expr1="Stock_Id" expr2="Stock_Id" op="=" />
+    </Link>
+    <Link table1="ws_Jobs" table2="reuters_Financials_SalesEstimates" type="Inner" QF="False">
+      <Condition type="FF" expr1="Job_id" expr2="job_run_id" op="=" />
+    </Link>
+    <Link table1="ws_Stocks" table2="reuters_Financials_Strength" type="Inner" QF="False">
+      <Condition type="FF" expr1="Stock_Id" expr2="Stock_Id" op="=" />
+    </Link>
+    <Link table1="ws_Jobs" table2="reuters_Financials_Strength" type="Inner" QF="False">
+      <Condition type="FF" expr1="Job_id" expr2="job_run_Id" op="=" />
+    </Link>
+    <Link table1="ws_Stocks" table2="reuters_Financials_ValuationRatios" type="Inner" QF="False">
+      <Condition type="FF" expr1="Stock_Id" expr2="Stock_Id" op="=" />
+    </Link>
+    <Link table1="ws_Jobs" table2="reuters_Financials_ValuationRatios" type="Inner" QF="False">
+      <Condition type="FF" expr1="Job_id" expr2="job_run_Id" op="=" />
+    </Link>
+    <Link table1="ws_Stocks" table2="reuters_RecommendationsRevisions" type="Inner" QF="False">
+      <Condition type="FF" expr1="Stock_Id" expr2="Stock_Id" op="=" />
+    </Link>
+    <Link table1="ws_Jobs" table2="reuters_RecommendationsRevisions" type="Inner" QF="False">
+      <Condition type="FF" expr1="Job_id" expr2="job_run_Id" op="=" />
+    </Link>
+    <Link table1="ws_JobScheduler" table2="ws_JobScheduler_Yearly" type="Inner" QF="False">
+      <Condition type="FF" expr1="scheduler_id" expr2="scheduler_id" op="=" />
+    </Link>
+    <Link table1="ws_JobScheduler" table2="ws_JobScheduler_Monthly" type="Inner" QF="False">
+      <Condition type="FF" expr1="scheduler_id" expr2="schedulder_id" op="=" />
+    </Link>
+    <Link table1="ws_JobScheduler" table2="ws_JobScheduler_Daily" type="Inner" QF="False">
+      <Condition type="FF" expr1="scheduler_id" expr2="scheduler_id" op="=" />
+    </Link>
+    <Link table1="ws_JobScheduler" table2="ws_JobScheduler_Weekly" type="Inner" QF="False">
+      <Condition type="FF" expr1="scheduler_id" expr2="scheduler_id" op="=" />
+    </Link>
+    <Link table1="ws_Jobs" table2="ws_JobRuns" type="Inner" QF="False">
+      <Condition type="FF" expr1="Job_id" expr2="job_run_id" op="=" />
+    </Link>
+    <Link table1="ws_Jobs" table2="ws_Logs" type="Inner" QF="False">
+      <Condition type="FF" expr1="Job_id" expr2="job_run_Id" op="=" />
+    </Link>
+  </Links>
+  <Editors>
+    <Editor id="_DTE" type="EDIT" resType="String" defValue="" />
+    <Editor id="_DPDE" type="DATETIME" resType="Unknown" subType="Date" />
+    <Editor id="_DPTE" type="DATETIME" resType="Unknown" subType="Time" />
+  </Editors>
+  <Operators>
+    <Operator id="Equal" caption="is equal to" expr="{expr1} = {expr2}" format="{expr1} [[is equal to]] {expr2}" constFmt="{const}" kind="Scalar" caseIns="False" group="Common operators" cond="False" tables="">
+      <Types>String,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="NotEqual" caption="is not equal to" expr="{expr1} &lt;&gt; {expr2}" format="{expr1} [[is not equal to]] {expr2}" constFmt="{const}" kind="Scalar" caseIns="False" group="Common operators" cond="False" tables="">
+      <Types>String,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="LessThan" caption="is less than" expr="{expr1} &lt; {expr2}" format="{expr1} [[is less than]] {expr2}" constFmt="{const}" kind="Scalar" caseIns="False" group="Common operators" cond="False" tables="">
+      <Types>String,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="LessOrEqual" caption="is less than or equal to" expr="{expr1} &lt;= {expr2}" format="{expr1} [[is less than or equal to]] {expr2}" constFmt="{const}" kind="Scalar" caseIns="False" group="Common operators" cond="False" tables="">
+      <Types>String,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="GreaterThan" caption="is greater than" expr="{expr1} &gt; {expr2}" format="{expr1} [[is greater than]] {expr2}" constFmt="{const}" kind="Scalar" caseIns="False" group="Common operators" cond="False" tables="">
+      <Types>String,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="GreaterOrEqual" caption="is greater than or equal to" expr="{expr1} &gt;= {expr2}" format="{expr1} [[is greater than or equal to]] {expr2}" constFmt="{const}" kind="Scalar" caseIns="False" group="Common operators" cond="False" tables="">
+      <Types>String,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="IsNull" caption="is null" expr="{expr1} IS NULL" format="{expr1} [[is null]]" constFmt="{const}" kind="Scalar" caseIns="False" group="Common operators" cond="False" tables="">
+      <Types>String,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="IsNotNull" caption="is not null" expr="{expr1} IS NOT NULL" format="{expr1} [[is not null]]" constFmt="{const}" kind="Scalar" caseIns="False" group="Common operators" cond="False" tables="">
+      <Types>String,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="IsTrue" caption="is true" expr="{expr1} = ${true}" format="{expr1} [[is true]]" constFmt="{const}" kind="Scalar" caseIns="False" group="Boolean operators" cond="False" tables="">
+      <Types>Bool</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="NotTrue" caption="is not true" expr="(({expr1} &lt;&gt; ${true}) OR ({expr1} IS NULL))" format="{expr1} [[is not true]]" constFmt="{const}" kind="Scalar" caseIns="False" group="Boolean operators" cond="False" tables="">
+      <Types>Bool</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="InList" caption="is in list" expr="{expr1} in ({expr2})" format="{expr1} [[is in list]] {expr2}" constFmt="{const}" kind="List" caseIns="False" group="Common operators" cond="False" tables="">
+      <Types>String,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="NotInList" caption="is not in list" expr="NOT ({expr1} in ({expr2}))" format="{expr1} [[is not in list]] {expr2}" constFmt="{const}" kind="List" caseIns="False" group="Common operators" cond="False" tables="">
+      <Types>String,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="Between" caption="is between" expr="{expr1} BETWEEN {expr2} AND {expr3}" format="{expr1} [[is between]] {expr2} and {expr3}" constFmt="{const}" kind="Scalar" isRange="True" caseIns="False" group="Common operators" cond="False" tables="">
+      <Types>String,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="NotBetween" caption="is not between" expr="NOT ({expr1} BETWEEN {expr2} AND {expr3})" format="{expr1} [[is not between]] {expr2} and {expr3}" constFmt="{const}" kind="Scalar" isRange="True" caseIns="False" group="Common operators" cond="False" tables="">
+      <Types>String,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="StartsWith" caption="starts with" expr="{expr1} LIKE {expr2}" format="{expr1} [[starts with]] {expr2}" constFmt="{const}{ws}" kind="Scalar" caseIns="False" editor="_DTE" group="String operators" cond="False" tables="">
+      <Types>String,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="NotStartsWith" caption="does not start with" expr="NOT ({expr1} LIKE {expr2})" format="{expr1} [[does not start with]] {expr2}" constFmt="{const}{ws}" kind="Scalar" caseIns="False" editor="_DTE" group="String operators" cond="False" tables="">
+      <Types>String,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="Contains" caption="contains" expr="{expr1} LIKE {expr2}" format="{expr1} [[contains]] {expr2}" constFmt="{ws}{const}{ws}" kind="Scalar" caseIns="False" editor="_DTE" group="String operators" cond="False" tables="">
+      <Types>String,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="NotContains" caption="does not contain" expr="NOT ({expr1} LIKE {expr2})" format="{expr1} [[does not contain]] {expr2}" constFmt="{ws}{const}{ws}" kind="Scalar" caseIns="False" editor="_DTE" group="String operators" cond="False" tables="">
+      <Types>String,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="InSubQuery" caption="in sub query" expr="{expr1} IN ({expr2})" format="{expr1} [[in sub query]] {expr2}" constFmt="{const}" kind="Query" caseIns="False" group="Common operators" cond="False" tables="">
+      <Types>String,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="DateWithinToday" caption="today" expr="${{Today}} &lt;= {expr1} AND {expr1} &lt; ${{Tomorrow}}" format="{expr1} [[within today]]" constFmt="{const}" kind="Scalar" caseIns="False" group="Date/time operators" cond="False" tables="">
+      <Types>Date,DateTime</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="DateWithinThisWeek" caption="this week" expr="${{FirstDayOfWeek}} &lt;= {expr1} AND {expr1} &lt; ${{FirstDayOfNextWeek}}" format="{expr1} [[within this week]]" constFmt="{const}" kind="Scalar" caseIns="False" group="Date/time operators" cond="False" tables="">
+      <Types>Date,DateTime</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="DateWithinThisMonth" caption="this month" expr="${{FirstDayOfMonth}} &lt;= {expr1} AND {expr1} &lt; ${{FirstDayOfNextMonth}}" format="{expr1} [[within this month]]" constFmt="{const}" kind="Scalar" caseIns="False" group="Date/time operators" cond="False" tables="">
+      <Types>Date,DateTime</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="DateWithinPrevMonth" caption="previous month" expr="${{FirstDayOfPrevMonth}} &lt;= {expr1} AND {expr1} &lt; ${{FirstDayOfMonth}}" format="{expr1} [[within previous month]]" constFmt="{const}" kind="Scalar" caseIns="False" group="Date/time operators" cond="False" tables="">
+      <Types>Date,DateTime</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="DateWithinThisYear" caption="this year" expr="${{FirstDayOfYear}} &lt;= {expr1} AND {expr1} &lt; ${{FirstDayOfNextYear}}" format="{expr1} [[within this year]]" constFmt="{const}" kind="Scalar" caseIns="False" group="Date/time operators" cond="False" tables="">
+      <Types>Date,DateTime</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="DateBeforePrecise" caption="before" expr="{expr1} &lt; {expr2}" format="{expr1} [[before]] {expr2}" constFmt="{const}" kind="Scalar" caseIns="False" editor="_DPDE" group="Date/time operators" cond="False" tables="">
+      <Types>Date,DateTime</Types>
+      <Operands defType="Unknown" defDefValue="${Today}" />
+    </Operator>
+    <Operator id="DateAfterPrecise" caption="after" expr="{expr1} &gt;= {expr2}" format="{expr1} [[after]] {expr2}" constFmt="{const}" kind="Scalar" caseIns="False" editor="_DPDE" group="Date/time operators" cond="False" tables="">
+      <Types>Date,DateTime</Types>
+      <Operands defType="Unknown" defDefValue="${FirstDayOfMonth}" />
+    </Operator>
+    <Operator id="DatePeriodPrecise" caption="custom period" expr="{expr1} BETWEEN {expr2} AND {expr3}" format="{expr1} [[within]] {expr2} and {expr3}" constFmt="{const}" kind="Scalar" isRange="True" caseIns="False" editor="_DPDE" group="Date/time operators" cond="False" tables="">
+      <Types>Date,DateTime</Types>
+      <Operands defType="Unknown" defDefValue="${Today}">
+        <Operand type="Unknown" kind="Scalar" defVal="${FirstDayOfMonth}" />
+        <Operand type="Unknown" kind="Scalar" defVal="${Today}" />
+      </Operands>
+    </Operator>
+    <Operator id="TimeBeforePrecise" caption="before" expr="{expr1} &lt; {expr2}" format="{expr1} [[before]] {expr2}" constFmt="{const}" kind="Scalar" caseIns="False" editor="_DPTE" group="Date/time operators" cond="False" tables="">
+      <Types>Time</Types>
+      <Operands defType="Unknown" defDefValue="${Now}" />
+    </Operator>
+    <Operator id="TimeAfterPrecise" caption="after" expr="{expr1} &gt;= {expr2}" format="{expr1} [[after]] {expr2}" constFmt="{const}" kind="Scalar" caseIns="False" editor="_DPTE" group="Date/time operators" cond="False" tables="">
+      <Types>Time</Types>
+      <Operands defType="Unknown" defDefValue="${HourStart}" />
+    </Operator>
+    <Operator id="TimePeriodPrecise" caption="between" expr="{expr1} BETWEEN {expr2} AND {expr3}" format="{expr1} [[between]] {expr2} and {expr3}" constFmt="{const}" kind="Scalar" isRange="True" caseIns="False" editor="_DPTE" group="Date/time operators" cond="False" tables="">
+      <Types>Time</Types>
+      <Operands defType="Unknown" defDefValue="${Today}">
+        <Operand type="Unknown" kind="Scalar" defVal="${HourStart}" />
+        <Operand type="Unknown" kind="Scalar" defVal="${Now}" />
+      </Operands>
+    </Operator>
+    <Operator id="MaximumOfAttr" caption="is maximum of" expr="{expr1} = (SELECT MAX({expr2.field}) FROM {expr2.table})" format="{expr1} [[is equal to maximum of]] {expr2}" constFmt="{const}" kind="Attribute" caseIns="False" group="Other operators" cond="False" tables="">
+      <Types>String,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar,Date,DateTime,Time</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+  </Operators>
+  <Entities maxId="0">
+    <Entity id="" name="finviz_Calendar" UIC="True" UIR="True" UIS="True">
+      <Attr id="finviz_Calendar.finviz_calendar_id" kind="Data" expr="finviz_calendar_id" caption="finviz_calendar_id" type="Int64" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Calendar">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Calendar.job_run_id" kind="Data" expr="job_run_id" caption="job_run_id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Calendar">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Calendar.calendar_date" kind="Data" expr="calendar_date" caption="calendar_date" type="String" size="30" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Calendar">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Calendar.banner_date" kind="Data" expr="banner_date" caption="banner_date" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Calendar">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Calendar.CreatedOn" kind="Data" expr="CreatedOn" caption="CreatedOn" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Calendar">
+        <Operators>DateWithinToday,DateWithinThisWeek,DateWithinThisMonth,DateWithinPrevMonth,DateWithinThisYear,DateBeforePrecise,DateAfterPrecise,DatePeriodPrecise,MaximumOfAttr,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Calendar.time_zone" kind="Data" expr="time_zone" caption="time_zone" type="String" size="6" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Calendar">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Calendar.market_closed" kind="Data" expr="market_closed" caption="market_closed" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Calendar">
+        <Operators>IsTrue,NotTrue</Operators>
+      </Attr>
+      <Attr id="finviz_Calendar.official_market_closure" kind="Data" expr="official_market_closure" caption="official_market_closure" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Calendar">
+        <Operators>IsTrue,NotTrue</Operators>
+      </Attr>
+      <Attr id="finviz_Calendar.market_closure_notes" kind="Data" expr="market_closure_notes" caption="market_closure_notes" type="String" size="1027" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Calendar">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Calendar.calendar_date_text" kind="Data" expr="calendar_date_text" caption="calendar_date_text" type="String" size="30" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Calendar">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Calendar.calendar_yyyy" kind="Data" expr="calendar_yyyy" caption="calendar_yyyy" type="String" size="5" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Calendar">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Calendar.calendar_mm" kind="Data" expr="calendar_mm" caption="calendar_mm" type="String" size="5" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Calendar">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Calendar.calendar_dd" kind="Data" expr="calendar_dd" caption="calendar_dd" type="String" size="5" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Calendar">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Calendar.calendar_day" kind="Data" expr="calendar_day" caption="calendar_day" type="String" size="5" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Calendar">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+    </Entity>
+    <Entity id="" name="finviz_Financials" UIC="True" UIR="True" UIS="True">
+      <Attr id="finviz_Financials.Finviz_FinancialId" kind="Data" expr="Finviz_FinancialId" caption="Finviz_FinancialId" type="Int64" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Financials.Stock_Id" kind="Data" expr="Stock_Id" caption="Stock_Id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Financials.job_run_Id" kind="Data" expr="job_run_Id" caption="job_run_Id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Financials.EffectiveDate" kind="Data" expr="EffectiveDate" caption="EffectiveDate" type="String" size="30" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Financials">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Financials.CreatedOn" kind="Data" expr="CreatedOn" caption="CreatedOn" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Financials">
+        <Operators>DateWithinToday,DateWithinThisWeek,DateWithinThisMonth,DateWithinPrevMonth,DateWithinThisYear,DateBeforePrecise,DateAfterPrecise,DatePeriodPrecise,MaximumOfAttr,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Financials.value" kind="Data" expr="value" caption="value" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Financials">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Financials.descriptor" kind="Data" expr="descriptor" caption="descriptor" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Financials">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+    </Entity>
+    <Entity id="" name="finviz_Insider_Trading" UIC="True" UIR="True" UIS="True">
+      <Attr id="finviz_Insider_Trading.Finviz_Insider_TradingId" kind="Data" expr="Finviz_Insider_TradingId" caption="Finviz_Insider_TradingId" type="Int64" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Insider_Trading">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Insider_Trading.stock_Id" kind="Data" expr="stock_Id" caption="stock_Id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Insider_Trading">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Insider_Trading.Job_run_Id" kind="Data" expr="Job_run_Id" caption="Job_run_Id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Insider_Trading">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Insider_Trading.EffectiveDate" kind="Data" expr="EffectiveDate" caption="EffectiveDate" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Insider_Trading">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Insider_Trading.insider_Trading" kind="Data" expr="insider_Trading" caption="insider_Trading" type="String" size="127" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Insider_Trading">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Insider_Trading.relationship" kind="Data" expr="relationship" caption="relationship" type="String" size="127" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Insider_Trading">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Insider_Trading.{Date}" kind="Data" expr="Date" caption="Date" type="String" size="63" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Insider_Trading">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Insider_Trading.it_transaction" kind="Data" expr="it_transaction" caption="it_transaction" type="String" size="63" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Insider_Trading">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Insider_Trading.cost" kind="Data" expr="cost" caption="cost" type="String" size="63" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Insider_Trading">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Insider_Trading.shares" kind="Data" expr="shares" caption="shares" type="String" size="63" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Insider_Trading">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Insider_Trading.value" kind="Data" expr="value" caption="value" type="String" size="63" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Insider_Trading">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Insider_Trading.shares_Total" kind="Data" expr="shares_Total" caption="shares_Total" type="String" size="63" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Insider_Trading">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Insider_Trading.SEC_Form_4" kind="Data" expr="SEC_Form_4" caption="SEC_Form_4" type="String" size="63" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Insider_Trading">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Insider_Trading.CreatedOn" kind="Data" expr="CreatedOn" caption="CreatedOn" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Insider_Trading">
+        <Operators>DateWithinToday,DateWithinThisWeek,DateWithinThisMonth,DateWithinPrevMonth,DateWithinThisYear,DateBeforePrecise,DateAfterPrecise,DatePeriodPrecise,MaximumOfAttr,IsNull,IsNotNull</Operators>
+      </Attr>
+    </Entity>
+    <Entity id="" name="finviz_Market_Movers" UIC="True" UIR="True" UIS="True">
+      <Attr id="finviz_Market_Movers.finviz_market_movers_id" kind="Data" expr="finviz_market_movers_id" caption="finviz_market_movers_id" type="Int64" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Market_Movers">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Market_Movers.stock_id" kind="Data" expr="stock_id" caption="stock_id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Market_Movers">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Market_Movers.job_run_id" kind="Data" expr="job_run_id" caption="job_run_id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Market_Movers">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Market_Movers.CreatedOn" kind="Data" expr="CreatedOn" caption="CreatedOn" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Market_Movers">
+        <Operators>DateWithinToday,DateWithinThisWeek,DateWithinThisMonth,DateWithinPrevMonth,DateWithinThisYear,DateBeforePrecise,DateAfterPrecise,DatePeriodPrecise,MaximumOfAttr,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Market_Movers.EffectiveDate" kind="Data" expr="EffectiveDate" caption="EffectiveDate" type="String" size="30" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Market_Movers">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Market_Movers.ticker" kind="Data" expr="ticker" caption="ticker" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Market_Movers">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Market_Movers.last_quote" kind="Data" expr="last_quote" caption="last_quote" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Market_Movers">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Market_Movers.percent_change" kind="Data" expr="percent_change" caption="percent_change" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Market_Movers">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Market_Movers.volume" kind="Data" expr="volume" caption="volume" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Market_Movers">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Market_Movers.signal" kind="Data" expr="signal" caption="signal" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Market_Movers">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+    </Entity>
+    <Entity id="" name="finviz_News" UIC="True" UIR="True" UIS="True">
+      <Attr id="finviz_News.finviz_news_id" kind="Data" expr="finviz_news_id" caption="finviz_news_id" type="Int64" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_News">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_News.stock_id" kind="Data" expr="stock_id" caption="stock_id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_News">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_News.job_run_id" kind="Data" expr="job_run_id" caption="job_run_id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_News">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_News.news_date" kind="Data" expr="news_date" caption="news_date" type="String" size="23" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_News">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_News.CreatedOn" kind="Data" expr="CreatedOn" caption="CreatedOn" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_News">
+        <Operators>DateWithinToday,DateWithinThisWeek,DateWithinThisMonth,DateWithinPrevMonth,DateWithinThisYear,DateBeforePrecise,DateAfterPrecise,DatePeriodPrecise,MaximumOfAttr,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_News.news_message" kind="Data" expr="news_message" caption="news_message" type="String" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_News">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_News.news_link" kind="Data" expr="news_link" caption="news_link" type="String" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_News">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+    </Entity>
+    <Entity id="" name="finviz_Recommendations" UIC="True" UIR="True" UIS="True">
+      <Attr id="finviz_Recommendations.finviz_recommendationId" kind="Data" expr="finviz_recommendationId" caption="finviz_recommendationId" type="Int64" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Recommendations">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Recommendations.job_run_id" kind="Data" expr="job_run_id" caption="job_run_id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Recommendations">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Recommendations.stock_id" kind="Data" expr="stock_id" caption="stock_id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Recommendations">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Recommendations.EffectiveDate" kind="Data" expr="EffectiveDate" caption="EffectiveDate" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Recommendations">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Recommendations.CreatedOn" kind="Data" expr="CreatedOn" caption="CreatedOn" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Recommendations">
+        <Operators>DateWithinToday,DateWithinThisWeek,DateWithinThisMonth,DateWithinPrevMonth,DateWithinThisYear,DateBeforePrecise,DateAfterPrecise,DatePeriodPrecise,MaximumOfAttr,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Recommendations.{Date}" kind="Data" expr="Date" caption="Date" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Recommendations">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Recommendations.RecommendationType" kind="Data" expr="RecommendationType" caption="RecommendationType" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Recommendations">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Recommendations.Analyst" kind="Data" expr="Analyst" caption="Analyst" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Recommendations">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Recommendations.Recommendation" kind="Data" expr="Recommendation" caption="Recommendation" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Recommendations">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="finviz_Recommendations.Target" kind="Data" expr="Target" caption="Target" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="finviz_Recommendations">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+    </Entity>
+    <Entity id="" name="ft_Consensus" UIC="True" UIR="True" UIS="True">
+      <Attr id="ft_Consensus.ConsensusId" kind="Data" expr="ConsensusId" caption="ConsensusId" type="Int64" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Consensus">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Consensus.job_run_id" kind="Data" expr="job_run_id" caption="job_run_id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Consensus">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Consensus.stock_id" kind="Data" expr="stock_id" caption="stock_id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Consensus">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Consensus.effective_date" kind="Data" expr="effective_date" caption="effective_date" type="String" size="30" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Consensus">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Consensus.consensus" kind="Data" expr="consensus" caption="consensus" type="String" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Consensus">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Consensus.buy_analyst_count" kind="Data" expr="buy_analyst_count" caption="buy_analyst_count" type="Word" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Consensus">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Consensus.outperform_analyst_count" kind="Data" expr="outperform_analyst_count" caption="outperform_analyst_count" type="Word" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Consensus">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Consensus.hold_analyst_count" kind="Data" expr="hold_analyst_count" caption="hold_analyst_count" type="Word" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Consensus">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Consensus.underperform_analyst_count" kind="Data" expr="underperform_analyst_count" caption="underperform_analyst_count" type="Word" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Consensus">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Consensus.sell_analyst_count" kind="Data" expr="sell_analyst_count" caption="sell_analyst_count" type="Word" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Consensus">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Consensus.no_opinion_analyst_count" kind="Data" expr="no_opinion_analyst_count" caption="no_opinion_analyst_count" type="Word" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Consensus">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Consensus.CreatedOn" kind="Data" expr="CreatedOn" caption="CreatedOn" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Consensus">
+        <Operators>DateWithinToday,DateWithinThisWeek,DateWithinThisMonth,DateWithinPrevMonth,DateWithinThisYear,DateBeforePrecise,DateAfterPrecise,DatePeriodPrecise,MaximumOfAttr,IsNull,IsNotNull</Operators>
+      </Attr>
+    </Entity>
+    <Entity id="" name="ft_Financials" UIC="True" UIR="True" UIS="True">
+      <Attr id="ft_Financials.financial_id" kind="Data" expr="financial_id" caption="financial_id" type="Int64" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.job_run_id" kind="Data" expr="job_run_id" caption="job_run_id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.stock_id" kind="Data" expr="stock_id" caption="stock_id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.effective_date" kind="Data" expr="effective_date" caption="effective_date" type="String" size="17" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.created_on" kind="Data" expr="created_on" caption="created_on" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>DateWithinToday,DateWithinThisWeek,DateWithinThisMonth,DateWithinPrevMonth,DateWithinThisYear,DateBeforePrecise,DateAfterPrecise,DatePeriodPrecise,MaximumOfAttr,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.year" kind="Data" expr="year" caption="year" type="String" size="4" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.ragp_total_revenue" kind="Data" expr="ragp_total_revenue" caption="ragp_total_revenue" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.oe_cost_of_revenue_total" kind="Data" expr="oe_cost_of_revenue_total" caption="oe_cost_of_revenue_total" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.oe_selling_generalexpenses_total" kind="Data" expr="oe_selling_generalexpenses_total" caption="oe_selling_generalexpenses_total" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.oe_depreciation_amort" kind="Data" expr="oe_depreciation_amort" caption="oe_depreciation_amort" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.oe_unusual_expense_income" kind="Data" expr="oe_unusual_expense_income" caption="oe_unusual_expense_income" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.oe_other_operating_expenses_total" kind="Data" expr="oe_other_operating_expenses_total" caption="oe_other_operating_expenses_total" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.oe_total_operating_expense" kind="Data" expr="oe_total_operating_expense" caption="oe_total_operating_expense" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.oe_operating_income" kind="Data" expr="oe_operating_income" caption="oe_operating_income" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.oe_other_net" kind="Data" expr="oe_other_net" caption="oe_other_net" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.itmiei_net_income_before_taxes" kind="Data" expr="itmiei_net_income_before_taxes" caption="itmiei_net_income_before_taxes" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.itmiei_provision_for_income_taxes" kind="Data" expr="itmiei_provision_for_income_taxes" caption="itmiei_provision_for_income_taxes" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.itmiei_net_income_after_taxes" kind="Data" expr="itmiei_net_income_after_taxes" caption="itmiei_net_income_after_taxes" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.itmiei_minority_interest" kind="Data" expr="itmiei_minority_interest" caption="itmiei_minority_interest" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.itmiei_net_income_before_extra_items" kind="Data" expr="itmiei_net_income_before_extra_items" caption="itmiei_net_income_before_extra_items" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.itmiei_total_extraordinary_items" kind="Data" expr="itmiei_total_extraordinary_items" caption="itmiei_total_extraordinary_items" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.itmiei_net_income" kind="Data" expr="itmiei_net_income" caption="itmiei_net_income" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.itmiei_inc_to_common_excl_extra_items" kind="Data" expr="itmiei_inc_to_common_excl_extra_items" caption="itmiei_inc_to_common_excl_extra_items" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.itmiei_inc_to_common_incl_extra_items" kind="Data" expr="itmiei_inc_to_common_incl_extra_items" caption="itmiei_inc_to_common_incl_extra_items" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.epsr_basic_weighted_average_shares" kind="Data" expr="epsr_basic_weighted_average_shares" caption="epsr_basic_weighted_average_shares" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.epsr_basic_eps_excl_extra_items" kind="Data" expr="epsr_basic_eps_excl_extra_items" caption="epsr_basic_eps_excl_extra_items" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.epsr_basic_eps_incl_extra_items" kind="Data" expr="epsr_basic_eps_incl_extra_items" caption="epsr_basic_eps_incl_extra_items" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.epsr_dilution_adjustment" kind="Data" expr="epsr_dilution_adjustment" caption="epsr_dilution_adjustment" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.epsr_diluted_weighted_average_shares" kind="Data" expr="epsr_diluted_weighted_average_shares" caption="epsr_diluted_weighted_average_shares" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.epsr_diluted_eps_excl_extra_items" kind="Data" expr="epsr_diluted_eps_excl_extra_items" caption="epsr_diluted_eps_excl_extra_items" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.epsr_diluted_eps_incl_extra_items" kind="Data" expr="epsr_diluted_eps_incl_extra_items" caption="epsr_diluted_eps_incl_extra_items" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.csd_dps_common_stock_primary_issue" kind="Data" expr="csd_dps_common_stock_primary_issue" caption="csd_dps_common_stock_primary_issue" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.csd_gross_dividend_common_stock" kind="Data" expr="csd_gross_dividend_common_stock" caption="csd_gross_dividend_common_stock" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.pfi_pro_forma_net_income" kind="Data" expr="pfi_pro_forma_net_income" caption="pfi_pro_forma_net_income" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.pfi_interest_expense_supplemental" kind="Data" expr="pfi_interest_expense_supplemental" caption="pfi_interest_expense_supplemental" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.si_depreciation_supplemental" kind="Data" expr="si_depreciation_supplemental" caption="si_depreciation_supplemental" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.si_total_special_items" kind="Data" expr="si_total_special_items" caption="si_total_special_items" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.ni_normalized_income_before_taxes" kind="Data" expr="ni_normalized_income_before_taxes" caption="ni_normalized_income_before_taxes" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.ni_effect_of_special_items_on_income_taxes" kind="Data" expr="ni_effect_of_special_items_on_income_taxes" caption="ni_effect_of_special_items_on_income_taxes" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.ni_income_tax_excluding_impact_of_special_items" kind="Data" expr="ni_income_tax_excluding_impact_of_special_items" caption="ni_income_tax_excluding_impact_of_special_items" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.ni_normalized_income_after_tax" kind="Data" expr="ni_normalized_income_after_tax" caption="ni_normalized_income_after_tax" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.ni_normalized_income_avail_to_common" kind="Data" expr="ni_normalized_income_avail_to_common" caption="ni_normalized_income_avail_to_common" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.ni_basic_normalized_eps" kind="Data" expr="ni_basic_normalized_eps" caption="ni_basic_normalized_eps" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Financials.ni_diluted_normalized_eps" kind="Data" expr="ni_diluted_normalized_eps" caption="ni_diluted_normalized_eps" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Financials">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+    </Entity>
+    <Entity id="" name="ft_Forecasts" UIC="True" UIR="True" UIS="True">
+      <Attr id="ft_Forecasts.forecast_id" kind="Data" expr="forecast_id" caption="forecast_id" type="Int64" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Forecasts">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Forecasts.job_run_id" kind="Data" expr="job_run_id" caption="job_run_id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Forecasts">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Forecasts.stock_id" kind="Data" expr="stock_id" caption="stock_id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Forecasts">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Forecasts.effective_date" kind="Data" expr="effective_date" caption="effective_date" type="String" size="30" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Forecasts">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Forecasts.forecast_description" kind="Data" expr="forecast_description" caption="forecast_description" type="String" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Forecasts">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Forecasts.current_price" kind="Data" expr="current_price" caption="current_price" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Forecasts">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Forecasts.high_target_price" kind="Data" expr="high_target_price" caption="high_target_price" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Forecasts">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Forecasts.medium_target_price" kind="Data" expr="medium_target_price" caption="medium_target_price" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Forecasts">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Forecasts.low_target_price" kind="Data" expr="low_target_price" caption="low_target_price" type="Currency" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Forecasts">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Forecasts.time_period_unit" kind="Data" expr="time_period_unit" caption="time_period_unit" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Forecasts">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Forecasts.time_period" kind="Data" expr="time_period" caption="time_period" type="Word" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Forecasts">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ft_Forecasts.CreatedOn" kind="Data" expr="CreatedOn" caption="CreatedOn" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ft_Forecasts">
+        <Operators>DateWithinToday,DateWithinThisWeek,DateWithinThisMonth,DateWithinPrevMonth,DateWithinThisYear,DateBeforePrecise,DateAfterPrecise,DatePeriodPrecise,MaximumOfAttr,IsNull,IsNotNull</Operators>
+      </Attr>
+    </Entity>
+    <Entity id="" name="reuters_Financials_Dividends" UIC="True" UIR="True" UIS="True">
+      <Attr id="reuters_Financials_Dividends.Reuters_FinancialsDividend_Id" kind="Data" expr="Reuters_FinancialsDividend_Id" caption="Reuters_FinancialsDividend_Id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_Dividends">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_Dividends.Stock_Id" kind="Data" expr="Stock_Id" caption="Stock_Id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_Dividends">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_Dividends.run_job_Id" kind="Data" expr="run_job_Id" caption="run_job_Id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_Dividends">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_Dividends.CreatedOn" kind="Data" expr="CreatedOn" caption="CreatedOn" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_Dividends">
+        <Operators>DateWithinToday,DateWithinThisWeek,DateWithinThisMonth,DateWithinPrevMonth,DateWithinThisYear,DateBeforePrecise,DateAfterPrecise,DatePeriodPrecise,MaximumOfAttr,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_Dividends.EffectiveDate" kind="Data" expr="EffectiveDate" caption="EffectiveDate" type="String" size="30" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_Dividends">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_Dividends.Title" kind="Data" expr="Title" caption="Title" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_Dividends">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_Dividends.Company" kind="Data" expr="Company" caption="Company" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_Dividends">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_Dividends.Industry" kind="Data" expr="Industry" caption="Industry" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_Dividends">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_Dividends.Sector" kind="Data" expr="Sector" caption="Sector" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_Dividends">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+    </Entity>
+    <Entity id="" name="reuters_Financials_Efficiencies" UIC="True" UIR="True" UIS="True">
+      <Attr id="reuters_Financials_Efficiencies.Reuters_FinancialsEfficiency_Id" kind="Data" expr="Reuters_FinancialsEfficiency_Id" caption="Reuters_FinancialsEfficiency_Id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_Efficiencies">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_Efficiencies.Stock_Id" kind="Data" expr="Stock_Id" caption="Stock_Id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_Efficiencies">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_Efficiencies.run_job_id" kind="Data" expr="run_job_id" caption="run_job_id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_Efficiencies">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_Efficiencies.EffectiveDate" kind="Data" expr="EffectiveDate" caption="EffectiveDate" type="String" size="30" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_Efficiencies">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_Efficiencies.CreatedOn" kind="Data" expr="CreatedOn" caption="CreatedOn" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_Efficiencies">
+        <Operators>DateWithinToday,DateWithinThisWeek,DateWithinThisMonth,DateWithinPrevMonth,DateWithinThisYear,DateBeforePrecise,DateAfterPrecise,DatePeriodPrecise,MaximumOfAttr,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_Efficiencies.Title" kind="Data" expr="Title" caption="Title" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_Efficiencies">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_Efficiencies.Company" kind="Data" expr="Company" caption="Company" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_Efficiencies">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_Efficiencies.Industry" kind="Data" expr="Industry" caption="Industry" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_Efficiencies">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_Efficiencies.Sector" kind="Data" expr="Sector" caption="Sector" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_Efficiencies">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+    </Entity>
+    <Entity id="" name="reuters_Financials_GrowthRates" UIC="True" UIR="True" UIS="True">
+      <Attr id="reuters_Financials_GrowthRates.Reuters_FinancialsGrowthRate_Id" kind="Data" expr="Reuters_FinancialsGrowthRate_Id" caption="Reuters_FinancialsGrowthRate_Id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_GrowthRates">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_GrowthRates.Stock_Id" kind="Data" expr="Stock_Id" caption="Stock_Id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_GrowthRates">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_GrowthRates.run_job_id" kind="Data" expr="run_job_id" caption="run_job_id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_GrowthRates">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_GrowthRates.CreatedOn" kind="Data" expr="CreatedOn" caption="CreatedOn" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_GrowthRates">
+        <Operators>DateWithinToday,DateWithinThisWeek,DateWithinThisMonth,DateWithinPrevMonth,DateWithinThisYear,DateBeforePrecise,DateAfterPrecise,DatePeriodPrecise,MaximumOfAttr,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_GrowthRates.EffectiveDate" kind="Data" expr="EffectiveDate" caption="EffectiveDate" type="String" size="30" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_GrowthRates">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_GrowthRates.Title" kind="Data" expr="Title" caption="Title" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_GrowthRates">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_GrowthRates.Company" kind="Data" expr="Company" caption="Company" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_GrowthRates">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_GrowthRates.Sector" kind="Data" expr="Sector" caption="Sector" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_GrowthRates">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_GrowthRates.Industry" kind="Data" expr="Industry" caption="Industry" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_GrowthRates">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+    </Entity>
+    <Entity id="" name="reuters_Financials_Institutions" UIC="True" UIR="True" UIS="True">
+      <Attr id="reuters_Financials_Institutions.Reuters_FinancialsInstitutions_Id" kind="Data" expr="Reuters_FinancialsInstitutions_Id" caption="Reuters_FinancialsInstitutions_Id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_Institutions">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_Institutions.Stock_Id" kind="Data" expr="Stock_Id" caption="Stock_Id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_Institutions">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_Institutions.job_run_id" kind="Data" expr="job_run_id" caption="job_run_id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_Institutions">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_Institutions.EffectiveDate" kind="Data" expr="EffectiveDate" caption="EffectiveDate" type="String" size="30" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_Institutions">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_Institutions.CreatedOn" kind="Data" expr="CreatedOn" caption="CreatedOn" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_Institutions">
+        <Operators>DateWithinToday,DateWithinThisWeek,DateWithinThisMonth,DateWithinPrevMonth,DateWithinThisYear,DateBeforePrecise,DateAfterPrecise,DatePeriodPrecise,MaximumOfAttr,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_Institutions.Title" kind="Data" expr="Title" caption="Title" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_Institutions">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_Institutions.DataValue" kind="Data" expr="DataValue" caption="DataValue" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_Institutions">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+    </Entity>
+    <Entity id="" name="reuters_Financials_MgmtEffectiveness" UIC="True" UIR="True" UIS="True">
+      <Attr id="reuters_Financials_MgmtEffectiveness.Reuters_FinancialsMgmtEffectiveness_Id" kind="Data" expr="Reuters_FinancialsMgmtEffectiveness_Id" caption="Reuters_FinancialsMgmtEffectiveness_Id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_MgmtEffectiveness">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_MgmtEffectiveness.Stock_Id" kind="Data" expr="Stock_Id" caption="Stock_Id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_MgmtEffectiveness">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_MgmtEffectiveness.job_run_Id" kind="Data" expr="job_run_Id" caption="job_run_Id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_MgmtEffectiveness">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_MgmtEffectiveness.EffectiveDate" kind="Data" expr="EffectiveDate" caption="EffectiveDate" type="String" size="30" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_MgmtEffectiveness">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_MgmtEffectiveness.CreatedOn" kind="Data" expr="CreatedOn" caption="CreatedOn" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_MgmtEffectiveness">
+        <Operators>DateWithinToday,DateWithinThisWeek,DateWithinThisMonth,DateWithinPrevMonth,DateWithinThisYear,DateBeforePrecise,DateAfterPrecise,DatePeriodPrecise,MaximumOfAttr,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_MgmtEffectiveness.Title" kind="Data" expr="Title" caption="Title" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_MgmtEffectiveness">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_MgmtEffectiveness.Company" kind="Data" expr="Company" caption="Company" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_MgmtEffectiveness">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_MgmtEffectiveness.Industry" kind="Data" expr="Industry" caption="Industry" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_MgmtEffectiveness">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_MgmtEffectiveness.Sector" kind="Data" expr="Sector" caption="Sector" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_MgmtEffectiveness">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+    </Entity>
+    <Entity id="" name="reuters_Financials_ProfitabilityRatios" UIC="True" UIR="True" UIS="True">
+      <Attr id="reuters_Financials_ProfitabilityRatios.Reuters_Financials_ProfitabilityRatios_Id" kind="Data" expr="Reuters_Financials_ProfitabilityRatios_Id" caption="Reuters_Financials_ProfitabilityRatios_Id" type="Int64" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_ProfitabilityRatios">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_ProfitabilityRatios.Stock_Id" kind="Data" expr="Stock_Id" caption="Stock_Id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_ProfitabilityRatios">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_ProfitabilityRatios.Job_run_Id" kind="Data" expr="Job_run_Id" caption="Job_run_Id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_ProfitabilityRatios">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_ProfitabilityRatios.EffectiveDate" kind="Data" expr="EffectiveDate" caption="EffectiveDate" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_ProfitabilityRatios">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_ProfitabilityRatios.Title" kind="Data" expr="Title" caption="Title" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_ProfitabilityRatios">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_ProfitabilityRatios.Company" kind="Data" expr="Company" caption="Company" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_ProfitabilityRatios">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_ProfitabilityRatios.Industry" kind="Data" expr="Industry" caption="Industry" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_ProfitabilityRatios">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_ProfitabilityRatios.Sector" kind="Data" expr="Sector" caption="Sector" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_ProfitabilityRatios">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_ProfitabilityRatios.CreatedOn" kind="Data" expr="CreatedOn" caption="CreatedOn" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_ProfitabilityRatios">
+        <Operators>DateWithinToday,DateWithinThisWeek,DateWithinThisMonth,DateWithinPrevMonth,DateWithinThisYear,DateBeforePrecise,DateAfterPrecise,DatePeriodPrecise,MaximumOfAttr,IsNull,IsNotNull</Operators>
+      </Attr>
+    </Entity>
+    <Entity id="" name="reuters_Financials_SalesEstimates" UIC="True" UIR="True" UIS="True">
+      <Attr id="reuters_Financials_SalesEstimates.Reuters_FinancialsSalesEstimates_Id" kind="Data" expr="Reuters_FinancialsSalesEstimates_Id" caption="Reuters_FinancialsSalesEstimates_Id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_SalesEstimates">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_SalesEstimates.Stock_Id" kind="Data" expr="Stock_Id" caption="Stock_Id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_SalesEstimates">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_SalesEstimates.job_run_id" kind="Data" expr="job_run_id" caption="job_run_id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_SalesEstimates">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_SalesEstimates.CreatedOn" kind="Data" expr="CreatedOn" caption="CreatedOn" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_SalesEstimates">
+        <Operators>DateWithinToday,DateWithinThisWeek,DateWithinThisMonth,DateWithinPrevMonth,DateWithinThisYear,DateBeforePrecise,DateAfterPrecise,DatePeriodPrecise,MaximumOfAttr,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_SalesEstimates.EffectiveDate" kind="Data" expr="EffectiveDate" caption="EffectiveDate" type="String" size="30" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_SalesEstimates">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_SalesEstimates.Title" kind="Data" expr="Title" caption="Title" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_SalesEstimates">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_SalesEstimates.Estimates" kind="Data" expr="Estimates" caption="Estimates" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_SalesEstimates">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_SalesEstimates.Mean" kind="Data" expr="Mean" caption="Mean" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_SalesEstimates">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_SalesEstimates.High" kind="Data" expr="High" caption="High" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_SalesEstimates">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_SalesEstimates.Low" kind="Data" expr="Low" caption="Low" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_SalesEstimates">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_SalesEstimates.Sale_Type" kind="Data" expr="Sale_Type" caption="Sale_Type" type="Word" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_SalesEstimates">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+    </Entity>
+    <Entity id="" name="reuters_Financials_Strength" UIC="True" UIR="True" UIS="True">
+      <Attr id="reuters_Financials_Strength.Reuters_FinancialsStrength_Id" kind="Data" expr="Reuters_FinancialsStrength_Id" caption="Reuters_FinancialsStrength_Id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_Strength">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_Strength.Stock_Id" kind="Data" expr="Stock_Id" caption="Stock_Id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_Strength">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_Strength.job_run_Id" kind="Data" expr="job_run_Id" caption="job_run_Id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_Strength">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_Strength.EffectiveDate" kind="Data" expr="EffectiveDate" caption="EffectiveDate" type="String" size="30" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_Strength">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_Strength.CreatedOn" kind="Data" expr="CreatedOn" caption="CreatedOn" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_Strength">
+        <Operators>DateWithinToday,DateWithinThisWeek,DateWithinThisMonth,DateWithinPrevMonth,DateWithinThisYear,DateBeforePrecise,DateAfterPrecise,DatePeriodPrecise,MaximumOfAttr,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_Strength.Title" kind="Data" expr="Title" caption="Title" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_Strength">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_Strength.Company" kind="Data" expr="Company" caption="Company" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_Strength">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_Strength.Industry" kind="Data" expr="Industry" caption="Industry" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_Strength">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_Strength.Sector" kind="Data" expr="Sector" caption="Sector" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_Strength">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+    </Entity>
+    <Entity id="" name="reuters_Financials_ValuationRatios" UIC="True" UIR="True" UIS="True">
+      <Attr id="reuters_Financials_ValuationRatios.Reuters_FinancialsValuationRatio_Id" kind="Data" expr="Reuters_FinancialsValuationRatio_Id" caption="Reuters_FinancialsValuationRatio_Id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_ValuationRatios">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_ValuationRatios.Stock_Id" kind="Data" expr="Stock_Id" caption="Stock_Id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_ValuationRatios">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_ValuationRatios.job_run_Id" kind="Data" expr="job_run_Id" caption="job_run_Id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_ValuationRatios">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_ValuationRatios.EffectiveDate" kind="Data" expr="EffectiveDate" caption="EffectiveDate" type="String" size="30" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_ValuationRatios">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_ValuationRatios.CreatedOn" kind="Data" expr="CreatedOn" caption="CreatedOn" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_ValuationRatios">
+        <Operators>DateWithinToday,DateWithinThisWeek,DateWithinThisMonth,DateWithinPrevMonth,DateWithinThisYear,DateBeforePrecise,DateAfterPrecise,DatePeriodPrecise,MaximumOfAttr,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_ValuationRatios.Title" kind="Data" expr="Title" caption="Title" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_ValuationRatios">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_ValuationRatios.Company" kind="Data" expr="Company" caption="Company" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_ValuationRatios">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_ValuationRatios.Industry" kind="Data" expr="Industry" caption="Industry" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_ValuationRatios">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_Financials_ValuationRatios.Sector" kind="Data" expr="Sector" caption="Sector" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_Financials_ValuationRatios">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+    </Entity>
+    <Entity id="" name="reuters_RecommendationsRevisions" UIC="True" UIR="True" UIS="True">
+      <Attr id="reuters_RecommendationsRevisions.Reuters_RecommendationsRevisions_Id" kind="Data" expr="Reuters_RecommendationsRevisions_Id" caption="Reuters_RecommendationsRevisions_Id" type="Int64" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_RecommendationsRevisions">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_RecommendationsRevisions.Stock_Id" kind="Data" expr="Stock_Id" caption="Stock_Id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_RecommendationsRevisions">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_RecommendationsRevisions.job_run_Id" kind="Data" expr="job_run_Id" caption="job_run_Id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_RecommendationsRevisions">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_RecommendationsRevisions.CreatedOn" kind="Data" expr="CreatedOn" caption="CreatedOn" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_RecommendationsRevisions">
+        <Operators>DateWithinToday,DateWithinThisWeek,DateWithinThisMonth,DateWithinPrevMonth,DateWithinThisYear,DateBeforePrecise,DateAfterPrecise,DatePeriodPrecise,MaximumOfAttr,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_RecommendationsRevisions.LastRecommendationDate" kind="Data" expr="LastRecommendationDate" caption="LastRecommendationDate" type="Date" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_RecommendationsRevisions">
+        <Operators>DateWithinToday,DateWithinThisWeek,DateWithinThisMonth,DateWithinPrevMonth,DateWithinThisYear,DateBeforePrecise,DateAfterPrecise,DatePeriodPrecise,MaximumOfAttr,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_RecommendationsRevisions.Linear_Scale" kind="Data" expr="Linear_Scale" caption="Linear_Scale" type="String" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_RecommendationsRevisions">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_RecommendationsRevisions.AnalystRecommend_Current" kind="Data" expr="AnalystRecommend_Current" caption="AnalystRecommend_Current" type="String" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_RecommendationsRevisions">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_RecommendationsRevisions.AnalystRecommend_Month_1" kind="Data" expr="AnalystRecommend_Month_1" caption="AnalystRecommend_Month_1" type="String" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_RecommendationsRevisions">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_RecommendationsRevisions.AnalystRecommend_Month_2" kind="Data" expr="AnalystRecommend_Month_2" caption="AnalystRecommend_Month_2" type="String" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_RecommendationsRevisions">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="reuters_RecommendationsRevisions.AnalystRecommend_Month_3" kind="Data" expr="AnalystRecommend_Month_3" caption="AnalystRecommend_Month_3" type="String" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="reuters_RecommendationsRevisions">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+    </Entity>
+    <Entity id="" name="sysdiagrams" UIC="True" UIR="True" UIS="True">
+      <Attr id="sysdiagrams.name" kind="Data" expr="name" caption="name" type="String" size="128" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="sysdiagrams">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="sysdiagrams.principal_id" kind="Data" expr="principal_id" caption="principal_id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="sysdiagrams">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="sysdiagrams.diagram_id" kind="Data" expr="diagram_id" caption="diagram_id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="sysdiagrams">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="sysdiagrams.version" kind="Data" expr="version" caption="version" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="sysdiagrams">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="sysdiagrams.definition" kind="Data" expr="definition" caption="definition" type="Blob" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="sysdiagrams">
+        <Operators />
+      </Attr>
+    </Entity>
+    <Entity id="" name="ws_JobRuns" UIC="True" UIR="True" UIS="True">
+      <Attr id="ws_JobRuns.run_id" kind="Data" expr="run_id" caption="run_id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobRuns">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_JobRuns.job_run_id" kind="Data" expr="job_run_id" caption="job_run_id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobRuns">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_JobRuns.web_calls_total" kind="Data" expr="web_calls_total" caption="web_calls_total" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobRuns">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_JobRuns.web_calls_success" kind="Data" expr="web_calls_success" caption="web_calls_success" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobRuns">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_JobRuns.web_calls_failures" kind="Data" expr="web_calls_failures" caption="web_calls_failures" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobRuns">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_JobRuns.CreatedOn" kind="Data" expr="CreatedOn" caption="CreatedOn" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobRuns">
+        <Operators>DateWithinToday,DateWithinThisWeek,DateWithinThisMonth,DateWithinPrevMonth,DateWithinThisYear,DateBeforePrecise,DateAfterPrecise,DatePeriodPrecise,MaximumOfAttr,IsNull,IsNotNull</Operators>
+      </Attr>
+    </Entity>
+    <Entity id="" name="ws_Jobs" UIC="True" UIR="True" UIS="True">
+      <Attr id="ws_Jobs.Job_id" kind="Data" expr="Job_id" caption="Job_id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_Jobs">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_Jobs.scheduler_id" kind="Data" expr="scheduler_id" caption="scheduler_id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_Jobs">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_Jobs.Start_Time" kind="Data" expr="Start_Time" caption="Start_Time" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_Jobs">
+        <Operators>DateWithinToday,DateWithinThisWeek,DateWithinThisMonth,DateWithinPrevMonth,DateWithinThisYear,DateBeforePrecise,DateAfterPrecise,DatePeriodPrecise,MaximumOfAttr,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_Jobs.CreatedOn" kind="Data" expr="CreatedOn" caption="CreatedOn" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_Jobs">
+        <Operators>DateWithinToday,DateWithinThisWeek,DateWithinThisMonth,DateWithinPrevMonth,DateWithinThisYear,DateBeforePrecise,DateAfterPrecise,DatePeriodPrecise,MaximumOfAttr,IsNull,IsNotNull</Operators>
+      </Attr>
+    </Entity>
+    <Entity id="" name="ws_JobScheduler" UIC="True" UIR="True" UIS="True">
+      <Attr id="ws_JobScheduler.jobtype_id" kind="Data" expr="jobtype_id" caption="jobtype_id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler.start_date" kind="Data" expr="start_date" caption="start_date" type="Date" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler">
+        <Operators>DateWithinToday,DateWithinThisWeek,DateWithinThisMonth,DateWithinPrevMonth,DateWithinThisYear,DateBeforePrecise,DateAfterPrecise,DatePeriodPrecise,MaximumOfAttr,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler.start_time" kind="Data" expr="start_time" caption="start_time" type="Time" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler">
+        <Operators>TimeBeforePrecise,TimeAfterPrecise,TimePeriodPrecise,MaximumOfAttr,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler.schedulertype_id" kind="Data" expr="schedulertype_id" caption="schedulertype_id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler.current_run_count" kind="Data" expr="current_run_count" caption="current_run_count" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler.max_run_count" kind="Data" expr="max_run_count" caption="max_run_count" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler.Status" kind="Data" expr="Status" caption="Status" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler">
+        <Operators>IsTrue,NotTrue</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler.CreatedOn" kind="Data" expr="CreatedOn" caption="CreatedOn" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler">
+        <Operators>DateWithinToday,DateWithinThisWeek,DateWithinThisMonth,DateWithinPrevMonth,DateWithinThisYear,DateBeforePrecise,DateAfterPrecise,DatePeriodPrecise,MaximumOfAttr,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler.scheduler_id" kind="Data" expr="scheduler_id" caption="scheduler_id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler.name" kind="Data" expr="name" caption="name" type="String" size="150" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler.description" kind="Data" expr="description" caption="description" type="String" size="250" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler.end_date" kind="Data" expr="end_date" caption="end_date" type="Date" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler">
+        <Operators>DateWithinToday,DateWithinThisWeek,DateWithinThisMonth,DateWithinPrevMonth,DateWithinThisYear,DateBeforePrecise,DateAfterPrecise,DatePeriodPrecise,MaximumOfAttr,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler.end_time" kind="Data" expr="end_time" caption="end_time" type="Time" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler">
+        <Operators>TimeBeforePrecise,TimeAfterPrecise,TimePeriodPrecise,MaximumOfAttr,IsNull,IsNotNull</Operators>
+      </Attr>
+    </Entity>
+    <Entity id="" name="ws_JobScheduler_Daily" UIC="True" UIR="True" UIS="True">
+      <Attr id="ws_JobScheduler_Daily.schedule_daily_id" kind="Data" expr="schedule_daily_id" caption="schedule_daily_id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler_Daily">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler_Daily.scheduler_id" kind="Data" expr="scheduler_id" caption="scheduler_id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler_Daily">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler_Daily.recur_days" kind="Data" expr="recur_days" caption="recur_days" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler_Daily">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler_Daily.CreatedOn" kind="Data" expr="CreatedOn" caption="CreatedOn" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler_Daily">
+        <Operators>DateWithinToday,DateWithinThisWeek,DateWithinThisMonth,DateWithinPrevMonth,DateWithinThisYear,DateBeforePrecise,DateAfterPrecise,DatePeriodPrecise,MaximumOfAttr,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler_Daily.IsWeekDay" kind="Data" expr="IsWeekDay" caption="IsWeekDay" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler_Daily">
+        <Operators>IsTrue,NotTrue</Operators>
+      </Attr>
+    </Entity>
+    <Entity id="" name="ws_JobScheduler_Monthly" UIC="True" UIR="True" UIS="True">
+      <Attr id="ws_JobScheduler_Monthly.scheduler_monthly_id" kind="Data" expr="scheduler_monthly_id" caption="scheduler_monthly_id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler_Monthly">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler_Monthly.schedulder_id" kind="Data" expr="schedulder_id" caption="schedulder_id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler_Monthly">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler_Monthly.monthly_nominal_day" kind="Data" expr="monthly_nominal_day" caption="monthly_nominal_day" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler_Monthly">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler_Monthly.monthly_nominal_month" kind="Data" expr="monthly_nominal_month" caption="monthly_nominal_month" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler_Monthly">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler_Monthly.monthly_day" kind="Data" expr="monthly_day" caption="monthly_day" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler_Monthly">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler_Monthly.monthly_week_of_day" kind="Data" expr="monthly_week_of_day" caption="monthly_week_of_day" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler_Monthly">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler_Monthly.monthly_freq" kind="Data" expr="monthly_freq" caption="monthly_freq" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler_Monthly">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler_Monthly.monthly_isweekday" kind="Data" expr="monthly_isweekday" caption="monthly_isweekday" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler_Monthly">
+        <Operators>IsTrue,NotTrue</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler_Monthly.CreatedOn" kind="Data" expr="CreatedOn" caption="CreatedOn" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler_Monthly">
+        <Operators>DateWithinToday,DateWithinThisWeek,DateWithinThisMonth,DateWithinPrevMonth,DateWithinThisYear,DateBeforePrecise,DateAfterPrecise,DatePeriodPrecise,MaximumOfAttr,IsNull,IsNotNull</Operators>
+      </Attr>
+    </Entity>
+    <Entity id="" name="ws_JobScheduler_Weekly" UIC="True" UIR="True" UIS="True">
+      <Attr id="ws_JobScheduler_Weekly.scheduler_weekly_id" kind="Data" expr="scheduler_weekly_id" caption="scheduler_weekly_id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler_Weekly">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler_Weekly.scheduler_id" kind="Data" expr="scheduler_id" caption="scheduler_id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler_Weekly">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler_Weekly.weekly_freq" kind="Data" expr="weekly_freq" caption="weekly_freq" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler_Weekly">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler_Weekly.weekly_sunday" kind="Data" expr="weekly_sunday" caption="weekly_sunday" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler_Weekly">
+        <Operators>IsTrue,NotTrue</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler_Weekly.weekly_monday" kind="Data" expr="weekly_monday" caption="weekly_monday" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler_Weekly">
+        <Operators>IsTrue,NotTrue</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler_Weekly.weekly_tuesday" kind="Data" expr="weekly_tuesday" caption="weekly_tuesday" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler_Weekly">
+        <Operators>IsTrue,NotTrue</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler_Weekly.weekly_wednesday" kind="Data" expr="weekly_wednesday" caption="weekly_wednesday" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler_Weekly">
+        <Operators>IsTrue,NotTrue</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler_Weekly.weekly_thursday" kind="Data" expr="weekly_thursday" caption="weekly_thursday" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler_Weekly">
+        <Operators>IsTrue,NotTrue</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler_Weekly.weekly_friday" kind="Data" expr="weekly_friday" caption="weekly_friday" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler_Weekly">
+        <Operators>IsTrue,NotTrue</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler_Weekly.weekly_saturday" kind="Data" expr="weekly_saturday" caption="weekly_saturday" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler_Weekly">
+        <Operators>IsTrue,NotTrue</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler_Weekly.CreatedOn" kind="Data" expr="CreatedOn" caption="CreatedOn" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler_Weekly">
+        <Operators>DateWithinToday,DateWithinThisWeek,DateWithinThisMonth,DateWithinPrevMonth,DateWithinThisYear,DateBeforePrecise,DateAfterPrecise,DatePeriodPrecise,MaximumOfAttr,IsNull,IsNotNull</Operators>
+      </Attr>
+    </Entity>
+    <Entity id="" name="ws_JobScheduler_Yearly" UIC="True" UIR="True" UIS="True">
+      <Attr id="ws_JobScheduler_Yearly.scheduler_yearly_id" kind="Data" expr="scheduler_yearly_id" caption="scheduler_yearly_id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler_Yearly">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler_Yearly.scheduler_id" kind="Data" expr="scheduler_id" caption="scheduler_id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler_Yearly">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler_Yearly.yearly_nominal_day" kind="Data" expr="yearly_nominal_day" caption="yearly_nominal_day" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler_Yearly">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler_Yearly.yearly_nominal_month" kind="Data" expr="yearly_nominal_month" caption="yearly_nominal_month" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler_Yearly">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler_Yearly.yearly_day" kind="Data" expr="yearly_day" caption="yearly_day" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler_Yearly">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler_Yearly.yearly_week_of_day" kind="Data" expr="yearly_week_of_day" caption="yearly_week_of_day" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler_Yearly">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler_Yearly.yearly_month" kind="Data" expr="yearly_month" caption="yearly_month" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler_Yearly">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler_Yearly.yearly_isweekday" kind="Data" expr="yearly_isweekday" caption="yearly_isweekday" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler_Yearly">
+        <Operators>IsTrue,NotTrue</Operators>
+      </Attr>
+      <Attr id="ws_JobScheduler_Yearly.CreatedOn" kind="Data" expr="CreatedOn" caption="CreatedOn" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_JobScheduler_Yearly">
+        <Operators>DateWithinToday,DateWithinThisWeek,DateWithinThisMonth,DateWithinPrevMonth,DateWithinThisYear,DateBeforePrecise,DateAfterPrecise,DatePeriodPrecise,MaximumOfAttr,IsNull,IsNotNull</Operators>
+      </Attr>
+    </Entity>
+    <Entity id="" name="ws_Logs" UIC="True" UIR="True" UIS="True">
+      <Attr id="ws_Logs.Log_Id" kind="Data" expr="Log_Id" caption="Log_Id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_Logs">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_Logs.job_run_Id" kind="Data" expr="job_run_Id" caption="job_run_Id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_Logs">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_Logs.scheduler_id" kind="Data" expr="scheduler_id" caption="scheduler_id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_Logs">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_Logs.stock_id" kind="Data" expr="stock_id" caption="stock_id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_Logs">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_Logs.log_msg" kind="Data" expr="log_msg" caption="log_msg" type="String" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_Logs">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_Logs.log_status" kind="Data" expr="log_status" caption="log_status" type="String" size="20" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_Logs">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_Logs.CreatedOn" kind="Data" expr="CreatedOn" caption="CreatedOn" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_Logs">
+        <Operators>DateWithinToday,DateWithinThisWeek,DateWithinThisMonth,DateWithinPrevMonth,DateWithinThisYear,DateBeforePrecise,DateAfterPrecise,DatePeriodPrecise,MaximumOfAttr,IsNull,IsNotNull</Operators>
+      </Attr>
+    </Entity>
+    <Entity id="" name="ws_Stocks" UIC="True" UIR="True" UIS="True">
+      <Attr id="ws_Stocks.Stock_Id" kind="Data" expr="Stock_Id" caption="Stock_Id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_Stocks">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_Stocks.Ticker" kind="Data" expr="Ticker" caption="Ticker" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_Stocks">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_Stocks.Company_Name" kind="Data" expr="Company_Name" caption="Company_Name" type="String" size="1280" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_Stocks">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_Stocks.UpdatedOn" kind="Data" expr="UpdatedOn" caption="UpdatedOn" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_Stocks">
+        <Operators>DateWithinToday,DateWithinThisWeek,DateWithinThisMonth,DateWithinPrevMonth,DateWithinThisYear,DateBeforePrecise,DateAfterPrecise,DatePeriodPrecise,MaximumOfAttr,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_Stocks.Exchange" kind="Data" expr="Exchange" caption="Exchange" type="String" size="128" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_Stocks">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_Stocks.Sector" kind="Data" expr="Sector" caption="Sector" type="String" size="128" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_Stocks">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_Stocks.Industry" kind="Data" expr="Industry" caption="Industry" type="String" size="128" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_Stocks">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_Stocks.Exchange_Abbr" kind="Data" expr="Exchange_Abbr" caption="Exchange_Abbr" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_Stocks">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_Stocks.Exchange_Letter" kind="Data" expr="Exchange_Letter" caption="Exchange_Letter" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_Stocks">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_Stocks.Format_Issue_Symbol" kind="Data" expr="Format_Issue_Symbol" caption="Format_Issue_Symbol" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_Stocks">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_Stocks.StatusState_Id" kind="Data" expr="StatusState_Id" caption="StatusState_Id" type="Word" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_Stocks">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_Stocks.Source" kind="Data" expr="Source" caption="Source" type="String" size="16" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_Stocks">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_Stocks.company_desc_finviz" kind="Data" expr="company_desc_finviz" caption="company_desc_finviz" type="String" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_Stocks">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_Stocks.sub_sector" kind="Data" expr="sub_sector" caption="sub_sector" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_Stocks">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_Stocks.country" kind="Data" expr="country" caption="country" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_Stocks">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="ws_Stocks.CreatedOn" kind="Data" expr="CreatedOn" caption="CreatedOn" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ws_Stocks">
+        <Operators>DateWithinToday,DateWithinThisWeek,DateWithinThisMonth,DateWithinPrevMonth,DateWithinThisYear,DateBeforePrecise,DateAfterPrecise,DatePeriodPrecise,MaximumOfAttr,IsNull,IsNotNull</Operators>
+      </Attr>
+    </Entity>
+    <Entity id="" name="wslu_JobSchedulerTypes" UIC="True" UIR="True" UIS="True">
+      <Attr id="wslu_JobSchedulerTypes.schedulertype_id" kind="Data" expr="schedulertype_id" caption="schedulertype_id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="wslu_JobSchedulerTypes">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="wslu_JobSchedulerTypes.schedulartype_name" kind="Data" expr="schedulartype_name" caption="schedulartype_name" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="wslu_JobSchedulerTypes">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+    </Entity>
+    <Entity id="" name="wslu_JobTypes" UIC="True" UIR="True" UIS="True">
+      <Attr id="wslu_JobTypes.jobtype_id" kind="Data" expr="jobtype_id" caption="jobtype_id" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="wslu_JobTypes">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+      <Attr id="wslu_JobTypes.jobtype_name" kind="Data" expr="jobtype_name" caption="jobtype_name" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="wslu_JobTypes">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+      </Attr>
+    </Entity>
+  </Entities>
+</DataModel>
